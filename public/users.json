@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Fahad Bin Javed",
+    "email": "fahad@example.com",
+    "phone": "03001234567"
+  },
+  {
+    "id": 2,
+    "name": "Ali Raza",
+    "email": "ali.raza@example.com",
+    "phone": "03011223344"
+  },
+  {
+    "id": 3,
+    "name": "Hassan Ahmed",
+    "email": "hassan@example.com",
+    "phone": "03121234567"
+  },
+  {
+    "id": 4,
+    "name": "Usman Khan",
+    "email": "usman@example.com",
+    "phone": "03211224455"
+  },
+  {
+    "id": 5,
+    "name": "Ahmed Ali",
+    "email": "ahmedali@example.com",
+    "phone": "03035557788"
+  },
+  {
+    "id": 6,
+    "name": "Bilal Aslam",
+    "email": "bilal@example.com",
+    "phone": "03451239876"
+  },
+  {
+    "id": 7,
+    "name": "Saad Qureshi",
+    "email": "saad@example.com",
+    "phone": "03345556677"
+  }
+]
