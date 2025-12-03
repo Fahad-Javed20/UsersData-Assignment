@@ -1,7 +1,11 @@
 import { useForm } from "react-hook-form";
 import type { UserType } from "../types/UserType";
 
-const UserForm = () => {
+interface UserFormProps {
+    onAddUser:(user:UserType)=>void
+}
+
+const UserForm = ({onAddUser}:UserFormProps) => {
   const {
     register,
     handleSubmit,
@@ -10,21 +14,21 @@ const UserForm = () => {
   } = useForm<UserType>();
 
   const onSubmit = (data: UserType) => {
-    console.log("User Added:", data);
+    onAddUser(data)
     reset()
   };
 
   return (
-    <div className="min-h-screen flex justify-center bg-gray-100">
+    <div className="max-h-screen flex justify-center bg-gray-100">
       <div className="w-96">
-        <h1 className="font-bold text-xl text-center mb-5">Add New User</h1>
+        <h1 className="font-bold text-xl text-center mb-5 p-5">Add New User</h1>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="p-6 bg-white shadow-2xl rounded-2xl space-y-5"
+          className="p-6 bg-white shadow-2xl rounded-2xl space-y-5 mb-10"
         >
           <div>
-            <label className="block font-medium mb-1">Name</label>
+            <label className="block font-medium mb-1 text-left">Name</label>
             <input
               {...register("name", { required: true })}
               placeholder="Enter your name"
@@ -34,7 +38,7 @@ const UserForm = () => {
           </div>
 
           <div>
-            <label className="block font-medium mb-1">Email</label>
+            <label className="block font-medium mb-1 text-left">Email</label>
             <input
               {...register("email", { required: true })}
               placeholder="Enter your Email"
@@ -44,7 +48,7 @@ const UserForm = () => {
           </div>
 
           <div>
-            <label className="block font-medium mb-1">Phone No</label>
+            <label className="block font-medium mb-1 text-left">Phone No</label>
             <input
               {...register("phone", { required: true })}
               placeholder="Enter your Phone"

@@ -11,13 +11,17 @@ const UserDashboard = () => {
     const fetchData = async () => {
       const response = await fetch("users.json");
       const data = await response.json();
-      setUsers(data.users);
+      setUsers(data);
     };
     fetchData();
   }, []);
+
+  const handelAddUser = (newUser:UserType)=>{
+setUsers((prev)=>[...prev,newUser])
+  }
   return (
     <div>
-      <UserForm />
+      <UserForm onAddUser = {handelAddUser} />
       <UserList users={users} />
     </div>
   );
